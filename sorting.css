@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+}
+
+.title{
+    color: white;
+    text-align: center;
+}
+
+.btn{   
+    border-style: solid;
+    border-radius: 1mm;
+    border-width: 0.25mm;
+}
+
+.btn-dark{
+    background-color: black;
+}
+
+.btn-newarray{
+    color: cyan;
+    border-color: cyan;
+    margin: 5px;
+    float: left;
+}
+
+.btn-sort{
+    color:deepskyblue;
+    border-color: deepskyblue;
+    margin: 5px;
+    float: right;
+}
