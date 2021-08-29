@@ -20,8 +20,9 @@
     <h1 class="text-light text-center">Sorting Visualizer</h1>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- navigation bar-->
         <div class="container-fluid justify-content-start">
-            <button class="btn btn-outline-info me-2" type="button">new array</button>
+            <button class="btn btn-outline-info me-2" type="button" id="newArrayBtn">new array</button>
             <button class="btn btn-outline-primary me-2" type="button">Bubble sort</button>
             <button class="btn btn-outline-primary me-2" type="button">Selection sort</button>
             <button class="btn btn-outline-primary me-2" type="button">Insertion sort</button>
@@ -29,6 +30,8 @@
             <button class="btn btn-outline-primary me-2" type="button">Merge sort</button>
         </div>
     </nav>
+    <!-- Bar chart to visualize the sorting-->
+    <div id="barChart"></div>
 
 
 
@@ -36,6 +39,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+    <script src="visualizer.js"></script>
 
 </body>
 

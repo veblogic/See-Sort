@@ -1,0 +1,11 @@
+#barChart{
+    display: inline-flex;
+    margin: 50px;   
+    width: 1400px;
+    align-items: flex-end;
+}
+.bar{
+    width: 10px;
+    background-color: goldenrod;
+    margin-right: 10px;
+}
