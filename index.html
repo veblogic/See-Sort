@@ -23,7 +23,18 @@
         <!-- navigation bar-->
         <div class="container-fluid justify-content-start">
             <button class="btn btn-outline-info me-2" type="button" id="newArrayBtn">new array</button>
-            <button class="btn btn-outline-primary me-2" type="button">Bubble sort</button>
+
+            <div class="slider">
+                <label class="text-light">no of bars</label>
+                <input id="array_size" type="range" min="10" max="120" step="1" value="50">
+            </div>
+
+            <div class="slider">
+                <label class="text-light">speed</label>
+                <input id="speed" type="range" min="100" max="900" step="100" value="500">
+            </div>
+
+            <button class="btn btn-outline-primary me-2" type="button" id="bubbleSortBtn">Bubble sort</button>
             <button class="btn btn-outline-primary me-2" type="button">Selection sort</button>
             <button class="btn btn-outline-primary me-2" type="button">Insertion sort</button>
             <button class="btn btn-outline-primary me-2" type="button">Quick sort</button>

@@ -9,3 +9,11 @@
     background-color: goldenrod;
     margin-right: 10px;
 }
+
+.slider{
+    padding: 5px;
+    border-left: 0.5px;
+    border-left-color:gray;
+    border-left-style: solid;
+    margin-left: 10px;
+}
