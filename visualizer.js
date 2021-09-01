@@ -16,10 +16,12 @@ function registerListeners(){
     document.getElementById("array_size").addEventListener("input",createNewArray);
     document.getElementById("newArrayBtn").addEventListener('click',createNewArray);
     document.getElementById("bubbleSortBtn").addEventListener('click',bubbleSort);
+    document.getElementById("selectionSortBtn").addEventListener('click',selectionSort);
 }
 
 /*
  * Bubble sorting
+ * sort an array by repeatedly swapping the adjacent elements if they are in wrong order.
  */
 async function bubbleSort(){
     var size = arrayToSort.length;
@@ -52,6 +54,58 @@ async function bubbleSort(){
 }
 
 /*
+ * Selection sort :
+ * sorts an array by repeatedly finding the minimum element (considering ascending order) 
+ * from unsorted part and putting it at the beginning
+ */
+async function selectionSort(){
+    var size = arrayToSort.length;
+
+    for(sortIndex=0;sortIndex<size;sortIndex++){
+        var minIndex = getMinimumIndex(arrayToSort,sortIndex);
+
+        var element1 = document.getElementById(sortIndex);
+        var element2 = document.getElementById(minIndex);    
+
+        element1.style.background="red";
+        element2.style.background="red";
+
+        var delay = 1000-document.querySelector("#speed").value;
+        await new Promise(resolve => {
+            setTimeout(() => {
+                resolve();
+            }, delay);
+        });
+
+        swapElements(element1,element2);
+        swapItems(sortIndex,minIndex);
+
+        element1.style.background="goldenrod";
+        element2.style.background="goldenrod";
+
+        element1.style.background="green";
+    }
+
+}
+
+/*
+ * returns the minimum element in a given array
+ * array : array of elements
+ * i : start index of unsorted array
+ */
+function getMinimumIndex(array,i){
+    var minIndex = i;  //index of minimum element
+    var minimum = array[i]; //minimum element
+    for (let index = i; index < array.length; index++) {
+        if(array[index]< minimum){
+            minimum = array[index];
+            minIndex = index;
+        }
+    }
+    return minIndex;
+}
+
+/*
  * Swap array items
  */
 function swapItems(i,j){
@@ -65,6 +119,7 @@ function swapItems(i,j){
  * el1,el2 : div elements to swap
  */
 function swapElements(el1, el2){
+
     const transform1 = window.getComputedStyle(el1).getPropertyValue("height"); //current height of first element
     const transform2 = window.getComputedStyle(el2).getPropertyValue("height"); // current height of second element
 
